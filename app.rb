@@ -1,5 +1,4 @@
 ENV['RACK_ENV'] ||= 'development'
-heroku addons:create heroku-postgresql:hobby-dev
 
 require 'sinatra/base'
 require_relative './models/link'
