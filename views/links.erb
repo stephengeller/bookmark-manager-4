@@ -1,0 +1,12 @@
+<ul id ='linklist'>
+  <% @links.each do |link| %>
+      <li>
+        Title: <%= link.title %>
+        URL: <%= link.url %>
+      </li>
+  <% end %>
+</ul>
+
+<form action="/links/new">
+  <input type="submit" value="Create new link">
+</form>
