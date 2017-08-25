@@ -1,11 +1,9 @@
 <ul id ='linklist'>
   <% @links.each do |link| %>
-      <% if link.tags.map(&:name).to_s.downcase.include? @tag_name %>
         <li>
           Title: <%= link.title %>
           URL: <%= link.url %>
           Tag: <%= link.tags.map(&:name).to_s %>
         </li>
-      <% end%>
   <% end %>
 </ul>
