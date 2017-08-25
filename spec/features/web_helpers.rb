@@ -13,3 +13,19 @@ def fill_in_bbc
   fill_in('tags', with: 'BBC')
   click_button 'Submit'
 end
+
+def fill_in_bubbles
+  visit '/links/new'
+  fill_in('title', with: 'Bubbl1111es')
+  fill_in('url', with: 'http://bbuubblesss.co.uk')
+  fill_in('tags', with: 'bubbles')
+  click_button 'Submit'
+end
+
+def fill_in_bubbles2
+  visit '/links/new'
+  fill_in('title', with: 'Bubble2222s')
+  fill_in('url', with: 'http://bbuu222bblesss.co.uk')
+  fill_in('tags', with: 'bubbles')
+  click_button 'Submit'
+end

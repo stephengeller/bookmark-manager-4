@@ -37,4 +37,20 @@ describe BookmarkManager do
       expect(link.tags.map(&:name)).to include('coding')
     end
   end
+
+  feature 'filtering by tag' do
+    before do
+      fill_in_bbc
+      fill_in_bubbles
+      fill_in_bubbles2
+    end
+    it 'populates page with only the right tag' do
+      visit '/tags/bubbles'
+
+      save_and_open_page
+      expect(page).to have_content 'Bubbl1111es'
+      expect(page).to have_content 'Bubble2222s'
+      expect(page).to_not have_content 'BBC'
+    end
+  end
 end
